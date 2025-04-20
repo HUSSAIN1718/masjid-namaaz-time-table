@@ -1,39 +1,91 @@
-body {
-    font-family: Arial, sans-serif;
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f9f9f9;
-    color: #333;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Header */
 header {
-    background-color: #1a73e8;
+    background-color: #3f51b5;
     color: white;
-    padding: 20px;
+    padding: 30px 0;
     text-align: center;
+    border-bottom: 5px solid #2c3e50;
 }
 
 header h1 {
-    font-size: 2.5em;
-}
-
-section {
-    padding: 20px;
-    margin: 10px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-section h2 {
-    font-size: 1.8em;
+    font-size: 3em;
     margin-bottom: 10px;
+    font-weight: 600;
+}
+
+header p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+/* Notices Section */
+#notices {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+}
+
+#notices h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#notices ul {
+    list-style-type: none;
+}
+
+#notices li {
+    background-color: #ecf0f1;
+    margin-bottom: 10px;
+    padding: 15px;
+    border-radius: 6px;
+    font-size: 1.1em;
+    color: #2c3e50;
+}
+
+/* Timetable Section */
+#timetable {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+}
+
+#timetable h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
 }
 
 table {
     width: 100%;
-    margin-top: 20px;
     border-collapse: collapse;
+    font-size: 1.1em;
+    color: #333;
 }
 
 table, th, td {
@@ -41,25 +93,73 @@ table, th, td {
 }
 
 th, td {
-    padding: 10px;
-    text-align: center;
+    padding: 12px;
+    text-align: left;
 }
 
-#notices ul {
-    list-style-type: none;
-    padding: 0;
+th {
+    background-color: #3f51b5;
+    color: white;
+    text-transform: uppercase;
 }
 
-#notices li {
-    background-color: #f1f1f1;
-    margin: 5px 0;
-    padding: 10px;
-    border-radius: 4px;
+tr:nth-child(even) {
+    background-color: #f9f9f9;
 }
 
+/* Officials Section */
+#officials {
+    background-color: #ffffff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    margin: 30px 0;
+}
+
+#officials h2 {
+    font-size: 2em;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+#officials p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* Footer */
 footer {
     background-color: #333;
     color: white;
     padding: 10px;
     text-align: center;
+    margin-top: 40px;
+    font-size: 1em;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    #notices, #timetable, #officials {
+        margin: 20px 0;
+    }
+    
+    table, th, td {
+        font-size: 0.9em;
+    }
+
+    #notices li {
+        font-size: 1em;
+    }
 }
